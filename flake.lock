@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "dms": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791300515,
+        "narHash": "sha256-ZPG/XLeFD1QCqgLT76m1u/5sAK2EC9afBxwQ1FyxHAw=",
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "rev": "9cceff29dd3cd8e4029ba6d5d52393d4c5d06704",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1791260994,
@@ -18,6 +34,7 @@
     },
     "root": {
       "inputs": {
+        "dms": "dms",
         "nixpkgs": "nixpkgs",
         "treefmt": "treefmt"
       }

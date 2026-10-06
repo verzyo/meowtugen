@@ -1,5 +1,10 @@
 {
   inputs = {
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      flake = false;
+    };
+
     treefmt = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,7 +17,8 @@
     treefmt,
     nixpkgs,
     self,
-  }: let
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs {inherit system;};
 
@@ -21,7 +27,7 @@
     };
   in {
     homeModules = rec {
-      meowtugen = ./nix/home.nix;
+      meowtugen = import ./nix/home.nix {inherit (inputs) dms;};
       default = meowtugen;
     };
 

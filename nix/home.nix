@@ -1,4 +1,4 @@
-{
+{dms}: {
   pkgs,
   lib,
   config,
@@ -20,6 +20,13 @@ in {
 
     package = lib.mkPackageOption pkgs "matugen" {};
 
+    zed.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = cfg.autoEnable;
+      defaultText = lib.literalExpression "config.programs.meowtugen.autoEnable";
+      description = "Whether to enable the Zed editor template.";
+    };
+
     foot.enable = lib.mkOption {
       type = lib.types.bool;
       default = cfg.autoEnable;
@@ -27,11 +34,11 @@ in {
       description = "Whether to enable the foot terminal template.";
     };
 
-    zed.enable = lib.mkOption {
+    niri.enable = lib.mkOption {
       type = lib.types.bool;
       default = cfg.autoEnable;
       defaultText = lib.literalExpression "config.programs.meowtugen.autoEnable";
-      description = "Whether to enable the Zed editor template.";
+      description = "Whether to enable the niri wm template.";
     };
   };
 
@@ -41,8 +48,16 @@ in {
     xdg.configFile."matugen/config.toml".source = (pkgs.formats.toml {}).generate "config.toml" {
       config = {};
 
-      templates =
-        lib.optionalAttrs cfg.foot.enable {
+      templates = let
+        dmsTemplates = "${dms}/quickshell/matugen/templates";
+      in
+        lib.optionalAttrs cfg.zed.enable {
+          zed = {
+            input_path = "${root}/templates/zed.json";
+            output_path = "${configHome}/zed/themes/meowtugen.json";
+          };
+        }
+        // lib.optionalAttrs cfg.foot.enable {
           foot_colors.input_path = "${root}/templates/foot/colors.ini";
 
           foot_reload = {
@@ -56,10 +71,10 @@ in {
             output_path = "${configHome}/foot/colors.ini";
           };
         }
-        // lib.optionalAttrs cfg.zed.enable {
-          zed = {
-            input_path = "${root}/templates/zed.json";
-            output_path = "${configHome}/zed/themes/meowtugen.json";
+        // lib.optionalAttrs cfg.niri.enable {
+          niri = {
+            input_path = "${dmsTemplates}/niri-colors.kdl";
+            output_path = "${configHome}/niri/colors.kdl";
           };
         };
     };
