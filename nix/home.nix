@@ -27,6 +27,21 @@ in {
       description = "Whether to enable the Zed editor template.";
     };
 
+    zen = {
+      enable = lib.mkOption {
+        type = lib.types.bool;
+        default = cfg.autoEnable;
+        defaultText = lib.literalExpression "config.programs.meowtugen.autoEnable";
+        description = "Whether to enable the Zen browser template.";
+      };
+
+      profileName = lib.mkOption {
+        type = lib.types.str;
+        default = "default";
+        description = "Zen browser profile the template is rendered into.";
+      };
+    };
+
     foot.enable = lib.mkOption {
       type = lib.types.bool;
       default = cfg.autoEnable;
@@ -55,6 +70,12 @@ in {
           zed = {
             input_path = "${root}/templates/zed.json";
             output_path = "${configHome}/zed/themes/meowtugen.json";
+          };
+        }
+        // lib.optionalAttrs cfg.zen.enable {
+          zen = {
+            input_path = "${root}/templates/zen.css";
+            output_path = "${configHome}/zen/${cfg.zen.profileName}/chrome/userChrome.css";
           };
         }
         // lib.optionalAttrs cfg.foot.enable {
