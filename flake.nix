@@ -17,15 +17,14 @@
     pkgs = import nixpkgs {inherit system;};
 
     treefmtEval = treefmt.lib.evalModule pkgs {
-      projectRootFile = "flake.nix";
-
-      programs = {
-        alejandra.enable = true; # .nix
-        shfmt.enable = true; # .sh
-        # jsonfmt.enable = true; # .json, invalid until rendered
-      };
+      imports = [./nix/formatter.nix];
     };
   in {
+    homeModules = rec {
+      meowtugen = ./nix/home.nix;
+      default = meowtugen;
+    };
+
     formatter.${system} = treefmtEval.config.build.wrapper;
   };
 }
