@@ -1,0 +1,765 @@
+{
+    "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+    "name": "Meowtugen",
+    "author": "Meowtugen",
+    "themes": [
+        {
+            "name": "Meowtugen Dark",
+            "appearance": "dark",
+            "style": {
+                "accents": [
+                    "{{colors.primary.dark.hex}}",
+                    "{{colors.secondary.dark.hex}}",
+                    "{{colors.tertiary.dark.hex}}"
+                ],
+                "background.appearance": "opaque",
+                "border": "{{colors.outline_variant.dark.hex}}",
+                "border.variant": "{{colors.outline.dark.hex}}",
+                "border.focused": "{{colors.primary.dark.hex}}",
+                "border.selected": "{{colors.primary.dark.hex}}",
+                "border.transparent": null,
+                "border.disabled": "{{colors.outline_variant.dark.hex}}60",
+                "elevated_surface.background": "{{colors.surface_container_high.dark.hex}}",
+                "surface.background": "{{colors.surface.dark.hex}}",
+                "background": "{{colors.surface_dim.dark.hex}}",
+                "element.background": "{{colors.surface_container.dark.hex}}",
+                "element.hover": "{{colors.surface_container_high.dark.hex}}",
+                "element.active": "{{colors.surface_container_highest.dark.hex}}",
+                "element.selected": "{{colors.primary_container.dark.hex}}",
+                "element.disabled": "{{colors.surface_variant.dark.hex}}",
+                "drop_target.background": "{{colors.primary_container.dark.hex}}80",
+                "ghost_element.background": null,
+                "ghost_element.hover": "{{colors.surface_container.dark.hex}}80",
+                "ghost_element.active": "{{colors.surface_container_high.dark.hex}}",
+                "ghost_element.selected": "{{colors.primary_container.dark.hex}}80",
+                "ghost_element.disabled": "{{colors.surface_variant.dark.hex}}60",
+                "text": "{{colors.on_surface.dark.hex}}",
+                "text.muted": "{{colors.on_surface_variant.dark.hex}}",
+                "text.placeholder": "{{colors.on_surface_variant.dark.hex}}99",
+                "text.disabled": "{{colors.on_surface.dark.hex}}60",
+                "text.accent": "{{colors.primary.dark.hex}}",
+                "icon": "{{colors.on_surface.dark.hex}}",
+                "icon.muted": "{{colors.on_surface_variant.dark.hex}}",
+                "icon.disabled": "{{colors.on_surface.dark.hex}}60",
+                "icon.placeholder": "{{colors.on_surface_variant.dark.hex}}80",
+                "icon.accent": "{{colors.primary.dark.hex}}",
+                "status_bar.background": "{{colors.surface_dim.dark.hex}}",
+                "title_bar.background": "{{colors.surface_dim.dark.hex}}",
+                "title_bar.inactive_background": "{{colors.surface_dim.dark.hex}}",
+                "toolbar.background": "{{colors.background.dark.hex}}",
+                "tab_bar.background": "{{colors.surface.dark.hex}}",
+                "tab.inactive_background": "{{colors.surface.dark.hex}}",
+                "tab.active_background": "{{colors.background.dark.hex}}",
+                "search.match_background": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}50",
+                "search.active_match_background": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}66",
+                "panel.background": "{{colors.surface.dark.hex}}",
+                "panel.focused_border": "{{colors.primary.dark.hex}}",
+                "pane.focused_border": "{{colors.primary.dark.hex}}",
+                "scrollbar.thumb.background": "{{colors.on_surface_variant.dark.hex}}50",
+                "scrollbar.thumb.hover_background": "{{colors.on_surface_variant.dark.hex}}80",
+                "scrollbar.thumb.border": "{{colors.outline_variant.dark.hex}}40",
+                "scrollbar.track.background": null,
+                "scrollbar.track.border": "{{colors.outline_variant.dark.hex}}20",
+                "editor.foreground": "{{colors.on_surface.dark.hex}}",
+                "editor.background": "{{colors.background.dark.hex}}",
+                "editor.gutter.background": "{{colors.surface_dim.dark.hex}}",
+                "editor.subheader.background": "{{colors.surface.dark.hex}}",
+                "editor.indent_guide": "{{colors.outline_variant.dark.hex}}22",
+                "editor.indent_guide_active": "{{colors.primary.dark.hex}}99",
+                "editor.active_line.background": "{{colors.surface_container.dark.hex}}66",
+                "editor.highlighted_line.background": "{{colors.surface_container.dark.hex}}66",
+                "editor.line_number": "{{colors.on_surface_variant.dark.hex}}",
+                "editor.active_line_number": "{{colors.primary.dark.hex}}",
+                "editor.invisible": "{{colors.outline_variant.dark.hex}}33",
+                "editor.wrap_guide": "{{colors.outline_variant.dark.hex}}22",
+                "editor.active_wrap_guide": "{{colors.outline.dark.hex}}80",
+                "editor.document_highlight.read_background": "{{colors.primary_container.dark.hex}}60",
+                "editor.document_highlight.write_background": "{{colors.secondary_container.dark.hex}}80",
+                "terminal.background": "{{colors.background.dark.hex}}",
+                "terminal.foreground": "{{colors.on_surface.dark.hex}}",
+                "terminal.bright_foreground": "{{colors.on_surface.dark.hex}}",
+                "terminal.dim_foreground": "{{colors.on_surface_variant.dark.hex}}",
+                "terminal.ansi.black": "{{colors.surface_container_lowest.dark.hex}}",
+                "terminal.ansi.bright_black": "{{colors.outline.dark.hex}}",
+                "terminal.ansi.dim_black": "{{colors.surface_container_lowest.dark.hex}}",
+                "terminal.ansi.red": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_red": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_red": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.green": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_green": "{{ "#94e2d5" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_green": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.yellow": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_yellow": "{{ "#fab387" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_yellow": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.blue": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_blue": "{{ "#b4befe" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_blue": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.magenta": "{{ "#cba6f7" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_magenta": "{{ "#f5c2e7" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_magenta": "{{ "#cba6f7" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.cyan": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_cyan": "{{ "#74c7ec" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_cyan": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "terminal.ansi.white": "{{colors.on_surface_variant.dark.hex}}",
+                "terminal.ansi.bright_white": "{{colors.on_surface.dark.hex}}",
+                "terminal.ansi.dim_white": "{{colors.on_surface_variant.dark.hex}}",
+                "link_text.hover": "{{colors.primary.dark.hex}}",
+                "version_control.added": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "version_control.modified": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "version_control.word_added": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}33",
+                "version_control.word_deleted": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}33",
+                "version_control.deleted": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "conflict": "{{colors.error.dark.hex}}",
+                "conflict.background": "{{colors.error_container.dark.hex}}80",
+                "conflict.border": "{{colors.on_error_container.dark.hex}}",
+                "created": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "created.background": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}1A",
+                "created.border": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "deleted": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "deleted.background": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}1A",
+                "deleted.border": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "error": "{{colors.error.dark.hex}}",
+                "error.background": "{{colors.error_container.dark.hex}}",
+                "error.border": "{{colors.on_error_container.dark.hex}}",
+                "hidden": "{{colors.outline_variant.dark.hex}}",
+                "hidden.background": "{{colors.outline_variant.dark.hex}}1A",
+                "hidden.border": "{{colors.outline_variant.dark.hex}}60",
+                "hint": "{{colors.primary.dark.hex}}",
+                "hint.background": "{{colors.primary_container.dark.hex}}80",
+                "hint.border": "{{colors.on_primary_container.dark.hex}}",
+                "ignored": "{{colors.on_surface_variant.dark.hex}}60",
+                "ignored.background": "{{colors.surface_variant.dark.hex}}40",
+                "ignored.border": "{{colors.outline_variant.dark.hex}}40",
+                "info": "{{colors.primary.dark.hex}}",
+                "info.background": "{{colors.primary_container.dark.hex}}80",
+                "info.border": "{{colors.on_primary_container.dark.hex}}",
+                "modified": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "modified.background": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}1A",
+                "modified.border": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "predictive": "{{colors.on_surface_variant.dark.hex}}80",
+                "predictive.border": "{{colors.outline.dark.hex}}",
+                "predictive.background": "{{colors.surface_container_highest.dark.hex}}80",
+                "renamed": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "renamed.border": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "renamed.background": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}1A",
+                "success": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "success.background": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}1A",
+                "success.border": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                "unreachable": "{{colors.on_surface_variant.dark.hex}}60",
+                "unreachable.background": "{{colors.surface_variant.dark.hex}}40",
+                "unreachable.border": "{{colors.outline_variant.dark.hex}}60",
+                "warning": "{{colors.tertiary_fixed_dim.dark.hex}}",
+                "warning.background": "{{colors.tertiary_container.dark.hex}}80",
+                "warning.border": "{{colors.on_tertiary_container.dark.hex}}",
+                "players": [
+                    {
+                        "cursor": "{{colors.primary.dark.hex}}",
+                        "background": "{{colors.primary_container.dark.hex}}80",
+                        "selection": "{{colors.primary_container.dark.hex}}60"
+                    },
+                    {
+                        "cursor": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "background": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "background": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#cba6f7" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "background": "{{ "#cba6f7" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#cba6f7" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "background": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "background": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#94e2d5" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "background": "{{ "#94e2d5" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#94e2d5" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "background": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}3D"
+                    }
+                ],
+                "syntax": {
+                    "attribute": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "boolean": {
+                        "color": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "comment": {
+                        "color": "{{colors.outline.dark.hex}}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "comment.doc": {
+                        "color": "{{colors.outline.dark.hex}}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "constant": {
+                        "color": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "constructor": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "embedded": {
+                        "color": "{{colors.on_surface.dark.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "emphasis": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "emphasis.strong": {
+                        "color": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": 700
+                    },
+                    "enum": {
+                        "color": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "function": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "keyword": {
+                        "color": "{{ "#cba6f7" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "label": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "link_text": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "link_uri": {
+                        "color": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": "normal",
+                        "font_weight": null
+                    },
+                    "number": {
+                        "color": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "operator": {
+                        "color": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "property": {
+                        "color": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation": {
+                        "color": "{{colors.on_surface_variant.dark.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.bracket": {
+                        "color": "{{colors.outline.dark.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.delimiter": {
+                        "color": "{{colors.outline.dark.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.list_marker": {
+                        "color": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.special": {
+                        "color": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "selector": {
+                        "color": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "selector.pseudo": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string": {
+                        "color": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.escape": {
+                        "color": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.regex": {
+                        "color": "{{ "#94e2d5" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.special": {
+                        "color": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.special.symbol": {
+                        "color": "{{ "#89dceb" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "tag": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "text.literal": {
+                        "color": "{{ "#a6e3a1" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "title": {
+                        "color": "{{ "#f38ba8" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": 700
+                    },
+                    "type": {
+                        "color": "{{ "#f9e2af" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "variable": {
+                        "color": "{{colors.on_surface.dark.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "variable.special": {
+                        "color": "{{ "#eba0ac" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "variant": {
+                        "color": "{{ "#89b4fa" | to_color | harmonize: {{ colors.primary.dark.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    }
+                }
+            }
+        },
+        {
+            "name": "Meowtugen Light",
+            "appearance": "light",
+            "style": {
+                "accents": [
+                    "{{colors.primary.light.hex}}",
+                    "{{colors.secondary.light.hex}}",
+                    "{{colors.tertiary.light.hex}}"
+                ],
+                "background.appearance": "opaque",
+                "border": "{{colors.outline_variant.light.hex}}",
+                "border.variant": "{{colors.outline.light.hex}}",
+                "border.focused": "{{colors.primary.light.hex}}",
+                "border.selected": "{{colors.primary.light.hex}}",
+                "border.transparent": null,
+                "border.disabled": "{{colors.outline_variant.light.hex}}60",
+                "elevated_surface.background": "{{colors.surface_container_high.light.hex}}",
+                "surface.background": "{{colors.surface.light.hex}}",
+                "background": "{{colors.surface_dim.light.hex}}",
+                "element.background": "{{colors.surface_container.light.hex}}",
+                "element.hover": "{{colors.surface_container_high.light.hex}}",
+                "element.active": "{{colors.surface_container_highest.light.hex}}",
+                "element.selected": "{{colors.primary_container.light.hex}}",
+                "element.disabled": "{{colors.surface_variant.light.hex}}",
+                "drop_target.background": "{{colors.primary_container.light.hex}}80",
+                "ghost_element.background": null,
+                "ghost_element.hover": "{{colors.surface_container.light.hex}}80",
+                "ghost_element.active": "{{colors.surface_container_high.light.hex}}",
+                "ghost_element.selected": "{{colors.primary_container.light.hex}}80",
+                "ghost_element.disabled": "{{colors.surface_variant.light.hex}}60",
+                "text": "{{colors.on_surface.light.hex}}",
+                "text.muted": "{{colors.on_surface_variant.light.hex}}",
+                "text.placeholder": "{{colors.on_surface_variant.light.hex}}99",
+                "text.disabled": "{{colors.on_surface.light.hex}}60",
+                "text.accent": "{{colors.primary.light.hex}}",
+                "icon": "{{colors.on_surface.light.hex}}",
+                "icon.muted": "{{colors.on_surface_variant.light.hex}}",
+                "icon.disabled": "{{colors.on_surface.light.hex}}60",
+                "icon.placeholder": "{{colors.on_surface_variant.light.hex}}80",
+                "icon.accent": "{{colors.primary.light.hex}}",
+                "status_bar.background": "{{colors.surface_dim.light.hex}}",
+                "title_bar.background": "{{colors.surface_dim.light.hex}}",
+                "title_bar.inactive_background": "{{colors.surface_dim.light.hex}}",
+                "toolbar.background": "{{colors.background.light.hex}}",
+                "tab_bar.background": "{{colors.surface.light.hex}}",
+                "tab.inactive_background": "{{colors.surface.light.hex}}",
+                "tab.active_background": "{{colors.background.light.hex}}",
+                "search.match_background": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}50",
+                "search.active_match_background": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}66",
+                "panel.background": "{{colors.surface.light.hex}}",
+                "panel.focused_border": "{{colors.primary.light.hex}}",
+                "pane.focused_border": "{{colors.primary.light.hex}}",
+                "scrollbar.thumb.background": "{{colors.on_surface_variant.light.hex}}50",
+                "scrollbar.thumb.hover_background": "{{colors.on_surface_variant.light.hex}}C0",
+                "scrollbar.thumb.border": "{{colors.outline_variant.light.hex}}40",
+                "scrollbar.track.background": null,
+                "scrollbar.track.border": "{{colors.outline_variant.light.hex}}20",
+                "editor.foreground": "{{colors.on_surface.light.hex}}",
+                "editor.background": "{{colors.background.light.hex}}",
+                "editor.gutter.background": "{{colors.surface_dim.light.hex}}",
+                "editor.subheader.background": "{{colors.surface.light.hex}}",
+                "editor.indent_guide": "{{colors.outline_variant.light.hex}}22",
+                "editor.indent_guide_active": "{{colors.outline.light.hex}}99",
+                "editor.active_line.background": "{{colors.surface_container.light.hex}}66",
+                "editor.highlighted_line.background": "{{colors.surface_container.light.hex}}66",
+                "editor.line_number": "{{colors.on_surface_variant.light.hex}}",
+                "editor.active_line_number": "{{colors.primary.light.hex}}",
+                "editor.invisible": "{{colors.outline_variant.light.hex}}33",
+                "editor.wrap_guide": "{{colors.outline_variant.light.hex}}22",
+                "editor.active_wrap_guide": "{{colors.outline.light.hex}}80",
+                "editor.document_highlight.read_background": "{{colors.primary_container.light.hex}}60",
+                "editor.document_highlight.write_background": "{{colors.secondary_container.light.hex}}80",
+                "terminal.background": "{{colors.background.light.hex}}",
+                "terminal.foreground": "{{colors.on_surface.light.hex}}",
+                "terminal.bright_foreground": "{{colors.on_surface.light.hex}}",
+                "terminal.dim_foreground": "{{colors.on_surface_variant.light.hex}}",
+                "terminal.ansi.black": "{{colors.surface_container_lowest.light.hex}}",
+                "terminal.ansi.bright_black": "{{colors.outline.light.hex}}",
+                "terminal.ansi.dim_black": "{{colors.surface_container_lowest.light.hex}}",
+                "terminal.ansi.red": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_red": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_red": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.green": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_green": "{{ "#179299" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_green": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.yellow": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_yellow": "{{ "#fe640b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_yellow": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.blue": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_blue": "{{ "#7287fd" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_blue": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.magenta": "{{ "#8839ef" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_magenta": "{{ "#ea76cb" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_magenta": "{{ "#8839ef" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.cyan": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.bright_cyan": "{{ "#209fb5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.dim_cyan": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "terminal.ansi.white": "{{colors.on_surface_variant.light.hex}}",
+                "terminal.ansi.bright_white": "{{colors.on_surface.light.hex}}",
+                "terminal.ansi.dim_white": "{{colors.on_surface_variant.light.hex}}",
+                "link_text.hover": "{{colors.primary.light.hex}}",
+                "version_control.added": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "version_control.modified": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "version_control.word_added": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}33",
+                "version_control.word_deleted": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}33",
+                "version_control.deleted": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "conflict": "{{colors.error.light.hex}}",
+                "conflict.background": "{{colors.error_container.light.hex}}80",
+                "conflict.border": "{{colors.on_error_container.light.hex}}",
+                "created": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "created.background": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}1A",
+                "created.border": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "deleted": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "deleted.background": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}1A",
+                "deleted.border": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "error": "{{colors.error.light.hex}}",
+                "error.background": "{{colors.error_container.light.hex}}",
+                "error.border": "{{colors.on_error_container.light.hex}}",
+                "hidden": "{{colors.outline_variant.light.hex}}",
+                "hidden.background": "{{colors.outline_variant.light.hex}}1A",
+                "hidden.border": "{{colors.outline_variant.light.hex}}60",
+                "hint": "{{colors.primary.light.hex}}",
+                "hint.background": "{{colors.primary_container.light.hex}}80",
+                "hint.border": "{{colors.on_primary_container.light.hex}}",
+                "ignored": "{{colors.on_surface_variant.light.hex}}60",
+                "ignored.background": "{{colors.surface_variant.light.hex}}40",
+                "ignored.border": "{{colors.outline_variant.light.hex}}40",
+                "info": "{{colors.primary.light.hex}}",
+                "info.background": "{{colors.primary_container.light.hex}}80",
+                "info.border": "{{colors.on_primary_container.light.hex}}",
+                "modified": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "modified.background": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}1A",
+                "modified.border": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "predictive": "{{colors.on_surface_variant.light.hex}}80",
+                "predictive.border": "{{colors.outline.light.hex}}",
+                "predictive.background": "{{colors.surface_container_highest.light.hex}}80",
+                "renamed": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "renamed.border": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "renamed.background": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}1A",
+                "success": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "success.background": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}1A",
+                "success.border": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                "unreachable": "{{colors.on_surface_variant.light.hex}}60",
+                "unreachable.background": "{{colors.surface_variant.light.hex}}40",
+                "unreachable.border": "{{colors.outline_variant.light.hex}}60",
+                "warning": "{{colors.tertiary_fixed_dim.light.hex}}",
+                "warning.background": "{{colors.tertiary_container.light.hex}}80",
+                "warning.border": "{{colors.on_tertiary_container.light.hex}}",
+                "players": [
+                    {
+                        "cursor": "{{colors.primary.light.hex}}",
+                        "background": "{{colors.primary_container.light.hex}}80",
+                        "selection": "{{colors.primary_container.light.hex}}60"
+                    },
+                    {
+                        "cursor": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "background": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "background": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#8839ef" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "background": "{{ "#8839ef" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#8839ef" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "background": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "background": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#179299" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "background": "{{ "#179299" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#179299" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}3D"
+                    },
+                    {
+                        "cursor": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "background": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}80",
+                        "selection": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}3D"
+                    }
+                ],
+                "syntax": {
+                    "attribute": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "boolean": {
+                        "color": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "comment": {
+                        "color": "{{colors.outline.light.hex}}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "comment.doc": {
+                        "color": "{{colors.outline.light.hex}}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "constant": {
+                        "color": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "constructor": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "embedded": {
+                        "color": "{{colors.on_surface.light.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "emphasis": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "emphasis.strong": {
+                        "color": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": 700
+                    },
+                    "enum": {
+                        "color": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "function": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "keyword": {
+                        "color": "{{ "#8839ef" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "label": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "link_text": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "link_uri": {
+                        "color": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": "normal",
+                        "font_weight": null
+                    },
+                    "number": {
+                        "color": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "operator": {
+                        "color": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "property": {
+                        "color": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation": {
+                        "color": "{{colors.on_surface_variant.light.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.bracket": {
+                        "color": "{{colors.outline.light.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.delimiter": {
+                        "color": "{{colors.outline.light.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.list_marker": {
+                        "color": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "punctuation.special": {
+                        "color": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "selector": {
+                        "color": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "selector.pseudo": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string": {
+                        "color": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.escape": {
+                        "color": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.regex": {
+                        "color": "{{ "#179299" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.special": {
+                        "color": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "string.special.symbol": {
+                        "color": "{{ "#04a5e5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "tag": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "text.literal": {
+                        "color": "{{ "#40a02b" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "title": {
+                        "color": "{{ "#d20f39" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": 700
+                    },
+                    "type": {
+                        "color": "{{ "#df8e1d" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": "italic",
+                        "font_weight": null
+                    },
+                    "variable": {
+                        "color": "{{colors.on_surface.light.hex}}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "variable.special": {
+                        "color": "{{ "#e64553" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    },
+                    "variant": {
+                        "color": "{{ "#1e66f5" | to_color | harmonize: {{ colors.primary.light.hex }} | format: "hex" }}",
+                        "font_style": null,
+                        "font_weight": null
+                    }
+                }
+            }
+        }
+    ]
+}
