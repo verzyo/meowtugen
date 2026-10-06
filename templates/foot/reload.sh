@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-SEQUENCES=$(tr -d '\r\n' <<'EOF'
+SEQUENCES=$(
+  tr -d '\r\n' <<'EOF'
 \033]10;#{{colors.on_surface.default.hex_stripped}}\007
 \033]11;#{{colors.background.default.hex_stripped}}\007
 \033]17;#{{colors.primary_container.default.hex_stripped}}\007
@@ -40,6 +41,5 @@ EOF
 )
 
 for pty in /dev/pts/[0-9]*; do
-    [ -w "$pty" ] && printf '%b' "$SEQUENCES" > "$pty" 2>/dev/null
+  [ -w "$pty" ] && printf '%b' "$SEQUENCES" >"$pty" 2>/dev/null
 done
-
