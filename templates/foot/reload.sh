@@ -3,7 +3,6 @@
 SEQUENCES=$(tr -d '\r\n' <<'EOF'
 \033]10;#{{colors.on_surface.default.hex_stripped}}\007
 \033]11;#{{colors.background.default.hex_stripped}}\007
-\033]19;#{{colors.on_primary_container.default.hex_stripped}}\007
 \033]17;#{{colors.primary_container.default.hex_stripped}}\007
 \033]12;#{{colors.primary.default.hex_stripped}}\007
 \033]4;0;#{{colors.surface_container_lowest.default.hex_stripped}}\007
