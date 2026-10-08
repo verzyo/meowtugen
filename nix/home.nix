@@ -40,6 +40,21 @@ in {
 
     package = lib.mkPackageOption pkgs "matugen" {};
 
+    discord = {
+      enable = lib.mkOption {
+        type = lib.types.bool;
+        default = cfg.autoEnable;
+        defaultText = lib.literalExpression "config.programs.meowtugen.autoEnable";
+        description = "Whether to enable the Discord client template.";
+      };
+
+      configPath = lib.mkOption {
+        type = lib.types.str;
+        default = "${configHome}/equibop";
+        description = "Discord client config folder path.";
+      };
+    };
+
     zed.enable = lib.mkOption {
       type = lib.types.bool;
       default = cfg.autoEnable;
@@ -93,7 +108,13 @@ in {
         templates = let
           dmsTemplates = "${dms}/quickshell/matugen/templates";
         in
-          lib.optionalAttrs cfg.zed.enable {
+          lib.optionalAttrs cfg.discord.enable {
+            discord = {
+              input_path = "${dmsTemplates}/vesktop.css";
+              output_path = "${cfg.discord.configPath}/themes/meowtugen.css";
+            };
+          }
+          // lib.optionalAttrs cfg.zed.enable {
             zed = {
               input_path = "${root}/templates/zed.json";
               output_path = "${configHome}/zed/themes/meowtugen.json";
