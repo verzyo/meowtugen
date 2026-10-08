@@ -107,11 +107,38 @@ in {
 
         templates = let
           dmsTemplates = "${dms}/quickshell/matugen/templates";
+
+          discordSplashMerge = pkgs.writeShellScript "meowtugen-discord-splash-merge" ''
+            set -eu
+
+            SETTINGS="${cfg.discord.configPath}/settings.json"
+            FRAGMENT="${cfg.discord.configPath}/splash-colors.json"
+
+            if [ ! -f "$SETTINGS" ]; then
+              echo "meowtugen: $SETTINGS not found, skipping splash merge"
+              exit 0
+            fi
+
+            TMP="$(mktemp "$SETTINGS.tmp.XXXXXX")"
+            trap 'rm -f "$TMP"' EXIT
+
+            ${lib.getExe pkgs.jq} -s '.[0] * .[1]' "$SETTINGS" "$FRAGMENT" > "$TMP"
+            ${lib.getExe pkgs.jq} empty "$TMP"
+
+            mv "$TMP" "$SETTINGS"
+            trap - EXIT
+          '';
         in
           lib.optionalAttrs cfg.discord.enable {
             discord = {
               input_path = "${dmsTemplates}/vesktop.css";
               output_path = "${cfg.discord.configPath}/themes/meowtugen.css";
+            };
+
+            discord_splash = {
+              input_path = "${root}/templates/discord-splash.json";
+              output_path = "${cfg.discord.configPath}/splash-colors.json";
+              post_hook = "${discordSplashMerge}";
             };
           }
           // lib.optionalAttrs cfg.zed.enable {
