@@ -5,6 +5,11 @@
       flake = false;
     };
 
+    themes = {
+      url = "github:InioX/matugen-themes";
+      flake = false;
+    };
+
     treefmt = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +32,7 @@
     };
   in {
     homeModules = rec {
-      meowtugen = import ./nix/home.nix {inherit (inputs) dms;};
+      meowtugen = import ./nix/home.nix {inherit (inputs) dms themes;};
       default = meowtugen;
     };
 

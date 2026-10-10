@@ -36,7 +36,24 @@
       "inputs": {
         "dms": "dms",
         "nixpkgs": "nixpkgs",
+        "themes": "themes",
         "treefmt": "treefmt"
+      }
+    },
+    "themes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787988654,
+        "narHash": "sha256-nUfF1KyKK2BherOwPwai6JzsrykP/zKxiAmoi7TTlvw=",
+        "owner": "InioX",
+        "repo": "matugen-themes",
+        "rev": "707c7b7d3550c9c21c0a8d72186748b1d205b88b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "InioX",
+        "repo": "matugen-themes",
+        "type": "github"
       }
     },
     "treefmt": {

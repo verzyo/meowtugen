@@ -1,4 +1,7 @@
-{dms}: {
+{
+  dms,
+  themes,
+}: {
   pkgs,
   lib,
   config,
@@ -39,6 +42,13 @@ in {
     };
 
     package = lib.mkPackageOption pkgs "matugen" {};
+
+    yazi.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = cfg.autoEnable;
+      defaultText = lib.literalExpression "config.programs.meowtugen.autoEnable";
+      description = "Whether to enable the Yazi file manager template.";
+    };
 
     discord = {
       enable = lib.mkOption {
@@ -106,6 +116,7 @@ in {
         config = {};
 
         templates = let
+          matugenTemplates = "${themes}/templates";
           dmsTemplates = "${dms}/quickshell/matugen/templates";
 
           discordSplashMerge = pkgs.writeShellScript "meowtugen-discord-splash-merge" ''
@@ -129,7 +140,13 @@ in {
             trap - EXIT
           '';
         in
-          lib.optionalAttrs cfg.discord.enable {
+          lib.optionalAttrs cfg.yazi.enable {
+            yazi = {
+              input_path = "${matugenTemplates}/yazi-theme.toml";
+              output_path = "${configHome}/yazi/theme.toml";
+            };
+          }
+          // lib.optionalAttrs cfg.discord.enable {
             discord = {
               input_path = "${dmsTemplates}/vesktop.css";
               output_path = "${cfg.discord.configPath}/themes/meowtugen.css";
